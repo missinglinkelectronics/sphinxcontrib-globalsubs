@@ -3,22 +3,20 @@
 from setuptools import setup, find_packages
 
 long_desc = '''
-This package contains the globalsubs Sphinx extension.
-
-.. add description here ..
+Adds support for global substitutions to ``conf.py``.
 '''
 
-requires = ['Sphinx>=0.6']
+requires = ['Sphinx>=1.6']
 
 setup(
     name='sphinxcontrib-globalsubs',
-    version='0.1',
-    url='http://bitbucket.org/birkenfeld/sphinx-contrib',
-    download_url='http://pypi.python.org/pypi/sphinxcontrib-globalsubs',
+    version='0.1.0',
+    url='https://github.com/missinglinkelectronics/sphinxcontrib-globalsubs',
+    download_url='https://pypi.org/project/sphinxcontrib-globalsubs',
     license='BSD',
     author='Stefan Wiehler',
     author_email='stefan.wiehler@missinglinkelectronics.com',
-    description='Sphinx "globalsubs" extension',
+    description='Sphinx global substitutions extension',
     long_description=long_desc,
     zip_safe=False,
     classifiers=[
@@ -28,9 +26,8 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
         'Framework :: Sphinx :: Extension',
-        #'Framework :: Sphinx :: Theme',
         'Topic :: Documentation',
         'Topic :: Utilities',
     ],
@@ -38,5 +35,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=requires,
+    python_requires='~=3.4',
     namespace_packages=['sphinxcontrib'],
 )
