@@ -42,7 +42,7 @@ class GlobalSubstitutions(SphinxTransform):
         to_handle = (set(global_substitutions.keys())
                 - set(self.document.substitution_defs))
 
-        for ref in self.document.traverse(nodes.substitution_reference):
+        for ref in self.document.findall(nodes.substitution_reference):
             refname = ref['refname']
             if refname in to_handle:
                 text = global_substitutions[refname]
