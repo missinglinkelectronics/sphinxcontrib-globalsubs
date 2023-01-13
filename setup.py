@@ -15,7 +15,7 @@ setup(
     download_url='https://pypi.org/project/sphinxcontrib-globalsubs',
     license='BSD',
     author='Stefan Wiehler',
-    author_email='stefan.wiehler@missinglinkelectronics.com',
+    author_email='sphinx_contribute@missinglinkelectronics.com',
     description='Sphinx global substitutions extension',
     long_description=long_desc,
     zip_safe=False,
