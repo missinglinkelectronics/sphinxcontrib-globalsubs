@@ -55,6 +55,9 @@ class GlobalSubstitutions(SphinxTransform):
                 # Remove encapsulating paragraph
                 if isinstance(substitution, nodes.paragraph):
                     substitution = substitution.next_node()
+                # Deal with possible parse failure
+                if substitution is None:
+                    continue
                 ref.replace_self(substitution)
 
 
