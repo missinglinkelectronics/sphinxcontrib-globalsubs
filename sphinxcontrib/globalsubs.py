@@ -32,7 +32,7 @@ class GlobalSubstitutions(SphinxTransform):
 
     def __init__(self, document, startnode=None):
         super().__init__(document, startnode)
-        self.parser = self.app.registry.create_source_parser(self.app, 'rst')
+        self.parser = self.app.registry.create_source_parser('rst', env=self.document.settings.env, config=self.document.settings.env.config)
 
     def apply(self):
         # type: () -> None
