@@ -6,7 +6,7 @@ long_desc = '''
 Adds support for global substitutions to ``conf.py``.
 '''
 
-requires = ['Sphinx>=1.6']
+requires = ['Sphinx>=9.0']
 
 setup(
     name='sphinxcontrib-globalsubs',
