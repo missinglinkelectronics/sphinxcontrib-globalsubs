@@ -10,7 +10,7 @@ requires = ['Sphinx>=9.0']
 
 setup(
     name='sphinxcontrib-globalsubs',
-    version='0.1.2',
+    version='1.0.0',
     url='https://github.com/missinglinkelectronics/sphinxcontrib-globalsubs',
     download_url='https://pypi.org/project/sphinxcontrib-globalsubs',
     license='BSD',
