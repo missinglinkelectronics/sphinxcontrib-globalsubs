@@ -16,6 +16,7 @@ from docutils.utils import new_document
 from sphinx.transforms import SphinxTransform
 from sphinx.util import logging
 from sphinx.util.docutils import LoggingReporter
+from sphinx import version_info
 
 if False:
     # For type annotation
@@ -32,7 +33,10 @@ class GlobalSubstitutions(SphinxTransform):
 
     def __init__(self, document, startnode=None):
         super().__init__(document, startnode)
-        self.parser = self.app.registry.create_source_parser('rst', env=self.document.settings.env, config=self.document.settings.env.config)
+        if version_info[0] >= 9:
+            self.parser = self.app.registry.create_source_parser('rst', env=self.document.settings.env, config=self.document.settings.env.config)
+        else:
+            self.parser = self.app.registry.create_source_parser(self.app, 'rst')
 
     def apply(self):
         # type: () -> None
